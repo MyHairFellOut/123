@@ -33,3 +33,24 @@ html , body{
 .reg-wrap{
   display: none;
 }
+
+.layui-form-item{
+  position:relative;
+
+}
+.layui-form-item i{
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  font-size: 20;
+}
+.layui-form-item input{
+  padding: 0 30px;
+}
+
+.reg-a{
+  display: flex;
+  justify-content: right;
+  margin: 20px;
+}
+
