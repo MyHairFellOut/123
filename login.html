@@ -31,11 +31,11 @@
 
     <div class="login-wrap">
 
-      <form class="layui-form" action="">
+      <form class="layui-form loginform" action="">
         <div class="layui-form-item">
 
           <i class="layui-icon layui-icon-username"></i>
-          <input type="text" name="title" required lay-verify="required" placeholder="请输入标题" autocomplete="off"
+          <input type="text" name="username" required lay-verify="required" placeholder="请输入标题" autocomplete="off"
             class="layui-input">
 
         </div>
@@ -51,7 +51,7 @@
 
 
         <div class="reg-a">
-          <a href="javascript:;" class=" go2login"> 去注册</a>
+          <a href="javascript:;" class=" go2reg"> 去注册</a>
         </div>
 
       </form>
@@ -63,11 +63,11 @@
 
 
     <div class="reg-wrap">
-<form class="layui-form" action="">
+<form class="layui-form" action="" id="formReg">
   <div class="layui-form-item">
 
     <i class="layui-icon layui-icon-username"></i>
-    <input type="text" name="title" required lay-verify="required" placeholder="请输入标题" autocomplete="off"
+    <input type="text" name="username" required lay-verify="required" placeholder="请输入标题" autocomplete="off"
       class="layui-input">
 
   </div>
@@ -81,7 +81,7 @@
   <div class="layui-form-item">
   
     <i class="layui-icon layui-icon-password"></i>
-    <input type="password" name="password"i required lay-verify="required|pass|same" placeholder="请再次输入密码" autocomplete="off"
+    <input type="password" name="repassword"i required lay-verify="required|pass|same" placeholder="请再次输入密码" autocomplete="off"
       class="layui-input">
   
   </div>
@@ -90,7 +90,7 @@
 
 
   <div class="reg-a">
-    <a href="javascript:;" class=" go2login"> 去登录</a>
+    <a href="javascript:;" class=" go2login" id="go2login1"> 去登录</a>
   </div>
 
 </form>
@@ -100,6 +100,7 @@
 
   <script src="./assets/lib/jquery.js"></script>
   <script src="./assets/lib/layui/layui.all.js"></script>
+  <script src="./assets/js/baseApi.js"></script>
   <script src="./assets/js/login.js"></script>
 </body>
 
