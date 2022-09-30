@@ -7,7 +7,7 @@
   <title>layout 管理系统大布局 - Layui</title>
 
   <link rel="stylesheet" href="./assets/lib/layui/css/layui.css">
-   <link rel="stylesheet" href="./assets/fonts/iconfont.css">
+  <link rel="stylesheet" href="./assets/fonts/iconfont.css">
   <link rel="stylesheet" href="./assets/css/index.css">
 </head>
 
@@ -18,14 +18,17 @@
         <img src="./assets/images/logo.png" alt="">
       </div>
       <!-- 头部区域（可配合layui 已有的水平导航） -->
-     
+
       <ul class="layui-nav layui-layout-right">
         <li class="layui-nav-item layui-hide layui-show-md-inline-block">
-          <a href="javascript:;">
-            <img src="//tva1.sinaimg.cn/crop.0.0.118.118.180/5db11ff4gw1e77d3nqrv8j203b03cweg.jpg"
-              class="layui-nav-img">
-          管理员
-          </a>
+
+          <div href="javascript:;" class="userinfo">
+            <img src="http://t.cn/RCzsdCq" class="layui-nav-img" />
+
+            <div class="text-avatar">黑马</div>
+            <div class="text">欢迎 黑马***</div>
+          </div>
+
           <dl class="layui-nav-child">
             <dd><a href="">基本信息</a></dd>
             <dd><a href="">更换头像</a></dd>
@@ -33,7 +36,7 @@
           </dl>
         </li>
         <li class="layui-nav-item" lay-header-event="menuRight" lay-unselect>
-          <a href="javascript:;">
+          <a href="javascript:;" id="btnlogout">
             <span class="iconfont icon-tuichu"></span>
             退出
           </a>
@@ -43,18 +46,26 @@
 
     <div class="layui-side layui-bg-black">
       <div class="layui-side-scroll">
+        <div class="user-box">
+          <img src="//tva1.sinaimg.cn/crop.0.0.118.118.180/5db11ff4gw1e77d3nqrv8j203b03cweg.jpg" class="layui-nav-img">
+
+          <div class="text-avatar">黑马</div>
+          <div class="text">欢迎 黑马***</div>
+        </div>
         <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
-        <ul class="layui-nav layui-nav-tree  "lay-shrink="all">
-          <li class="layui-nav-item layui-this"><a href="javascript:;"><span class="iconfont icon-home"></span>首页</a></li>
-          
+        <ul class="layui-nav layui-nav-tree  " lay-shrink="all">
+
+          <li class="layui-nav-item layui-this"><a href="javascript:;"><span class="iconfont icon-home"></span>首页</a>
+          </li>
+
           <li class="layui-nav-item">
-            
+
             <a class="" href="javascript:;"><span class="iconfont icon-16"></span>文章管理</a>
             <dl class="layui-nav-child">
               <dd><a href="javascript:;"><i class="layui-icon layui-icon-app"></i>分类管理</a></dd>
               <dd><a href="javascript:;"><i class="layui-icon layui-icon-app"></i>列表管理</a></dd>
               <dd><a href="javascript:;"><i class="layui-icon layui-icon-app"></i>发布文章</a></dd>
-              
+
             </dl>
           </li>
           <li class="layui-nav-item ">
@@ -62,27 +73,37 @@
             <dl class="layui-nav-child">
               <dd><a href="javascript:;"><span class="iconfont icon-user">基本信息</a></dd>
               <dd><a href="javascript:;"><span class="iconfont icon-user">更换头像</a></dd>
-              <dd><a href=""><span class="iconfont icon-user">重置密码</a></dd>
+              <dd><a href="javascript:;"><span class="iconfont icon-user">重置密码</a></dd>
             </dl>
           </li>
-          
-          
+
+
         </ul>
       </div>
     </div>
 
     <div class="layui-body">
       <!-- 内容主体区域 -->
-      <div style="padding: 15px;">内容主体区域。记得修改 layui.css 和 js 的路径</div>
+      <iframe src="" name="abc"></iframe>
+
+      <div style="padding: 15px;">
+
+
+
+      </div>
+      </iframe>
     </div>
 
     <div class="layui-footer">
       <!-- 底部固定区域 -->
-    前端开发工程狮
+      前端开发工程狮
     </div>
   </div>
   <script src="./assets/lib/layui/layui.all.js"></script>
-  <script>
+  <script src="./assets/lib/jquery.js"></script>
+  <script src="./assets/js/baseApi.js"></script>
+  <script src="./assets/js/index.js"></script>
+  <!-- <script>
     //JS 
     layui.use(['element', 'layer', 'util'], function () {
       var element = layui.element
@@ -109,7 +130,7 @@
       });
 
     });
-  </script>
+  </script> -->
 </body>
 
 </html>
