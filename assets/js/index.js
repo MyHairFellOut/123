@@ -2,15 +2,16 @@ $(function(){
  let layer = layui.layer
 
   getUserInfo()
-  function getUserInfo() {
+   function getUserInfo() {
    $.ajax({
      method: `get`,
      url: `/my/userinfo`,
    
      success(res) {
        if (res.code !== 0) return layer.msg(res.message)
+       console.log(res);
        renderAvatar(res)
-       
+     
      }
 
 
@@ -23,10 +24,12 @@ $(function(){
  const renderAvatar =(res) =>{
   
    if (res.user_pic) {
-     $(`.text-avatar`).hide()
+    console.log(`a`);
+     $(`.text-avatar`)
      $(`.user-box img`).css(`src`, res.user_pic).show()
 
    } else {
+    console.log(`b`);
      $(`.layui-nav-img`).hide()
      const name =res.data.nikname || res.data.username
      const char = res.data.username.charAt(0).toUpperCase()
