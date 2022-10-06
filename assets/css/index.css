@@ -47,6 +47,7 @@ user-select: none;
 .user-box .text{
   font-size: 12px;
   user-select: none;
+  display: none;
 }
 
 .userinfo {

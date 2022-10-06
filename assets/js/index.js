@@ -24,13 +24,13 @@ $(function(){
   
    if (res.user_pic) {
      $(`.text-avatar`).hide()
-     $(`.user-box img`).css(`src`, res.user_pic)
+     $(`.user-box img`).css(`src`, res.user_pic).show()
 
    } else {
      $(`.layui-nav-img`).hide()
      const name =res.data.nikname || res.data.username
      const char = res.data.username.charAt(0).toUpperCase()
-     $(`.text-avatar`).html(char)
+     $(`.text-avatar`).html(char).show()
    }
 
    $(`.text`).html(`欢迎&nbsp&nbsp;${res.data.username}`)
